@@ -8,7 +8,7 @@ app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('/user-branch', (req, res) => {
+app.get('/mock-api/user-branch', (req, res) => {
     res.json({
         'status': 'success',
         'data': {
