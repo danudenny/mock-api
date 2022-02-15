@@ -16,7 +16,8 @@ app.get('/mock-api/user-branch', async (req, res) => {
                 'firstName': 'Internal',
                 'lastName': 'Internal',
                 'branchIds': [
-                    'a3ba1451-8eb0-4740-9e12-43debdc48726'
+                    'a3ba1451-8eb0-4740-9e12-43debdc48726',
+                    '9f3fbbbb-efc9-4c2c-b624-595569af284b'
                 ],
             }
         })
