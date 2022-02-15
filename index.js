@@ -8,17 +8,21 @@ app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('/mock-api/user-branch', (req, res) => {
-    res.json({
-        'status': 'success',
-        'data': {
-            'firstName': 'Internal',
-            'lastName': 'Internal',
-            'branchIds': [
-                'a3ba1451-8eb0-4740-9e12-43debdc48726'
-            ],
-        }
-    })
+app.get('/mock-api/user-branch', async (req, res) => {
+    try {
+        res.json({
+            'status': 'success',
+            'data': {
+                'firstName': 'Internal',
+                'lastName': 'Internal',
+                'branchIds': [
+                    'a3ba1451-8eb0-4740-9e12-43debdc48726'
+                ],
+            }
+        })
+    } catch (error) {
+        return res.status(500).send("Server Error")
+    }
 })
 
 app.listen(9000, () => {
